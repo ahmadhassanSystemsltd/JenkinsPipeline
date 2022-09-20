@@ -1,15 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Clean Reports')
-    {
-      steps{
-        echo '********* Cleaning Workspace Stage Started **********'
-        bat 'rmdir /s /q test-reports'
-        echo '********* Cleaning Workspace Stage Finished **********'
-      }
-    }
-    
     stage('Build Stage') {
       steps {
         echo '********* Build Stage Started **********'
